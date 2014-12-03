@@ -1,4 +1,4 @@
-Wheel::Application.routes.draw do
+Quiz::Application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'registrations' }
 

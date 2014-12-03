@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/bigbinary/wheel.png?style=badge)](https://circleci.com/gh/bigbinary/wheel)
+[![Circle CI](https://circleci.com/gh/bigbinary/quiz.png?style=badge)](https://circleci.com/gh/bigbinary/quiz)
 
 #### Setup
 
@@ -7,13 +7,13 @@ rake setup
 bundle exec rails server
 ```
 
-#### Replace Wheel with your project name
+#### Replace Quiz with your project name
 
 Let's say that the project name is `Pump`. Execute the command below to
-replace all occurrences of `Wheel` with `Pump`.
+replace all occurrences of `Quiz` with `Pump`.
 
 ```
- perl -e "s/Wheel/Pump/g;" -pi $(find . -type f)
+ perl -e "s/Quiz/Pump/g;" -pi $(find . -type f)
 ```
 
 #### Instructions

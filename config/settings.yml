@@ -15,7 +15,7 @@ common:
     bucket_name: <%= ENV['AWS_S3_BUCKET_NAME'] %>
 
   mailer:
-    default_from_email: "'Wheel' <notifications@wheel.com>"
+    default_from_email: "'Quiz' <notifications@quiz.com>"
     delivery_method: test
     smtp_settings:
       user_name: <%= ENV['MANDRILLAPP_USERNAME'] %>
@@ -51,7 +51,7 @@ staging:
     smtp_settings:
       user_name: <%= ENV['MANDRILLAPP_USERNAME'] %>
       password: <%= ENV['MANDRILLAPP_PASSWORD'] %>
-      domain: www.wheel.com
+      domain: www.quiz.com
       address: smtp.mandrillapp.com
       port: 587
       authentication: plain
@@ -64,14 +64,14 @@ staging:
     support@example.com
 
 production:
-  bcc: hello.wheel@gmail.com
+  bcc: hello.quiz@gmail.com
   mailer:
     delivery_method: :smtp
 
     smtp_settings:
       user_name: <%= ENV['MANDRILLAPP_USERNAME'] %>
       password: <%= ENV['MANDRILLAPP_PASSWORD'] %>
-      domain: www.wheel.com
+      domain: www.quiz.com
       address: smtp.mandrillapp.com
       port: 587
       authentication: plain
