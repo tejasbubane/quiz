@@ -1,0 +1,38 @@
+\q
+show databases;
+show tables;
+create table test.test (coltest varchar(20));
+insert into test.test (coltest) values ('It works!');
+select * from test.test;
+drop table test.test;
+\list
+\l
+\l
+\s
+\?
+\d
+\?
+\conninfo
+\q
+create user 'tejas' password 'tejas1991';
+create user tejas password 'tejas1991';
+\l
+\dt
+create table test (test_column varchar(20));
+\dt
+\d test
+insert into test test_column values ('test_value');
+insert into test (test_column) values ('test_value');
+select * from test;
+\d
+\dt
+\d
+\d
+\d test
+\l
+\conninfo
+\q
+\d
+\l
+\l
+\s quiz_development;

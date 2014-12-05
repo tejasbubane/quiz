@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140225143027) do
+ActiveRecord::Schema.define(version: 20141204173702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20140225143027) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
+  create_table "answers", force: true do |t|
+    t.string   "option"
+    t.string   "text",                        null: false
+    t.boolean  "correctness", default: false
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0
     t.integer  "attempts",   default: 0
@@ -46,6 +55,21 @@ ActiveRecord::Schema.define(version: 20140225143027) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "questions", force: true do |t|
+    t.string   "text",        null: false
+    t.boolean  "has_options"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_attempts", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.string   "answers",     array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",         null: false
