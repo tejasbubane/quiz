@@ -1,10 +1,10 @@
 desc "Display Ramu's performance."
-task display_result_for_ramu: [:environment, :not_production] do
+task display_result_for_ramu: [:environment, :not_production, :disable_logger] do
   Rake::Task[:display_result_for].invoke('Ramu')
 end
 
 desc "Display Ramu's performance."
-task display_result_for_will: [:environment, :not_production] do
+task display_result_for_will: [:environment, :not_production, :disable_logger] do
   Rake::Task[:display_result_for].invoke('Will')
 end
 

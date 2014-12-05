@@ -1,10 +1,10 @@
 desc 'Ramu answers all questions'
-task process_result_for_ramu: [:environment, :not_production] do
+task process_result_for_ramu: [:environment, :not_production, :disable_logger] do
   Rake::Task[:process_result_for].invoke('Ramu', true)
 end
 
 desc 'Will answers all questions'
-task process_result_for_will: [:environment, :not_production] do
+task process_result_for_will: [:environment, :not_production, :disable_logger] do
   Rake::Task[:process_result_for].invoke('Will', false)
 end
 
