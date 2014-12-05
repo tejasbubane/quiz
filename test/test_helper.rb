@@ -20,12 +20,11 @@ ENV["RAILS_ENV"] ||= "test"
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-require 'minitest/reporters'
-require 'mocha/setup'
-require 'minitest/pride'
+# require 'minitest/reporters'
+# require 'mocha/setup'
+# require 'minitest/pride'
 
-
-MiniTest::Reporters.use!
+# MiniTest::Reporters.use!
 
 class ActiveSupport::TestCase
 
