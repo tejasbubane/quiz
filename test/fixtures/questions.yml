@@ -1,11 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+que_one:
+  text: Capital of India is
+  has_options: true
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+que_two:
+  text: Madan has 4 mangoes. His mother gave him 3 more mangoes. Now Madan has __ mangoes. He gave 2 mangoes to his sister. Now he has ___ mangoes.
+  has_options: false
